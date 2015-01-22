@@ -1,1 +1,3 @@
-mkdir $HOME/.grails-static-website
+echo "Creating /home/vcap/.grails-static-website"
+mkdir /home/vcap/.grails-static-website
+
