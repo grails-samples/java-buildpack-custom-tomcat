@@ -14,9 +14,9 @@ import java.io.IOException;
 public class AlwaysHttpsRemoteIpValve extends RemoteIpValve {
 	@Override
 	public void invoke(Request request, Response response) throws IOException, ServletException {
-		super.invoke(request, response);
 		request.setSecure(true);
 		request.getCoyoteRequest().scheme().setString("https");
 		request.setServerPort(getHttpsServerPort());
+		super.invoke(request, response);
 	}
 }
